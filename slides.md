@@ -111,7 +111,7 @@ export function Button({ children, variant, ...props}: ButtonProps) {
 
 ---
 
-# CSS
+# Componente: Botão (React)
 
 <br>
 <br>
@@ -132,6 +132,8 @@ export function Button({ children, variant, ...props}: ButtonProps) {
 }
 ```
 
+---
+# CSS
 ---
 
 # Referências
