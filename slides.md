@@ -133,7 +133,435 @@ export function Button({ children, variant, ...props}: ButtonProps) {
 ```
 
 ---
-# CSS
+
+# Componente: Botão (CSS)
+
+```css {2-16} {maxHeight:'420px'}
+.button {
+  /* TODO: mover variáveis para global.css  */
+  --font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --color-white: #fff;
+  --color-black: #0f172a; /* slate-900 */
+  --color-light-gray: #cbd5e1; /* slate-300 */
+  --color-lighter-gray: #f1f5f9; /* slate-100 */
+  --color-blue: #3b82f6; /* blue-500 */
+  --color-dark-blue: #1d4ed8; /* blue-700 */
+  --color-light-blue: #93c5fd; /* blue-300 */
+  --color-lighter-blue: #eff6ff; /* blue-50 */
+  --radius-sm: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+
+  /* Variáveis do botão */
+  --button-color: var(--color-black);
+  --button-background-color: var(--color-white);
+  --button-border-color: var(--color-light-gray);
+  --button-border-color-hover: var(--color-lighter-gray);
+  --button-outline-color-focus: var(--color-lighter-gray);
+
+  all: unset;
+  font-family: var(--font-family);
+  background-color: var(--button-background-color);
+  color: var(--button-color);
+  border: 1px solid var(--button-border-color);
+  border-radius: var(--radius-sm);
+  padding: var(--spacing-sm) var(--spacing-md);
+  cursor: pointer;
+  user-select: none;
+  line-height: 1;
+}
+
+.button:hover,
+.button--state-hover {
+  background-color: var(--button-border-color-hover);
+}
+
+.button:focus,
+.button--state-focus {
+  outline: 2px solid var(--button-outline-color-focus);
+}
+
+.button:active,
+.button--state-active {
+  margin-bottom: -2px;
+}
+
+.button:disabled,
+.button--state-disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.button:disabled:hover,
+.button--state-disabled:hover {
+  background-color: var(--button-background-color);
+}
+
+.button[data-variant="primary"] {
+  --button-color: var(--color-white);
+  --button-background-color: var(--color-blue);
+  --button-border-color: var(--color-blue);
+  --button-border-color-hover: var(--color-dark-blue);
+  --button-outline-color-focus: var(--color-light-blue);
+}
+
+.button[data-variant="secondary"] {
+  --button-color: var(--color-blue);
+  --button-background-color: var(--color-white);
+  --button-border-color: var(--color-blue);
+  --button-border-color-hover: var(--color-lighter-blue);
+  --button-outline-color-focus: var(--color-light-blue);
+}
+```
+
+<!-- Explicar as variáveis locais -->
+
+---
+
+# Componente: Botão (CSS)
+
+```css {18-23} {maxHeight:'420px'}
+.button {
+  /* TODO: mover variáveis para global.css  */
+  --font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --color-white: #fff;
+  --color-black: #0f172a; /* slate-900 */
+  --color-light-gray: #cbd5e1; /* slate-300 */
+  --color-lighter-gray: #f1f5f9; /* slate-100 */
+  --color-blue: #3b82f6; /* blue-500 */
+  --color-dark-blue: #1d4ed8; /* blue-700 */
+  --color-light-blue: #93c5fd; /* blue-300 */
+  --color-lighter-blue: #eff6ff; /* blue-50 */
+  --radius-sm: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+
+  /* Variáveis do botão */
+  --button-color: var(--color-black);
+  --button-background-color: var(--color-white);
+  --button-border-color: var(--color-light-gray);
+  --button-border-color-hover: var(--color-lighter-gray);
+  --button-outline-color-focus: var(--color-lighter-gray);
+
+  all: unset;
+  font-family: var(--font-family);
+  background-color: var(--button-background-color);
+  color: var(--button-color);
+  border: 1px solid var(--button-border-color);
+  border-radius: var(--radius-sm);
+  padding: var(--spacing-sm) var(--spacing-md);
+  cursor: pointer;
+  user-select: none;
+  line-height: 1;
+}
+
+.button:hover,
+.button--state-hover {
+  background-color: var(--button-border-color-hover);
+}
+
+.button:focus,
+.button--state-focus {
+  outline: 2px solid var(--button-outline-color-focus);
+}
+
+.button:active,
+.button--state-active {
+  margin-bottom: -2px;
+}
+
+.button:disabled,
+.button--state-disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.button:disabled:hover,
+.button--state-disabled:hover {
+  background-color: var(--button-background-color);
+}
+
+.button[data-variant="primary"] {
+  --button-color: var(--color-white);
+  --button-background-color: var(--color-blue);
+  --button-border-color: var(--color-blue);
+  --button-border-color-hover: var(--color-dark-blue);
+  --button-outline-color-focus: var(--color-light-blue);
+}
+
+.button[data-variant="secondary"] {
+  --button-color: var(--color-blue);
+  --button-background-color: var(--color-white);
+  --button-border-color: var(--color-blue);
+  --button-border-color-hover: var(--color-lighter-blue);
+  --button-outline-color-focus: var(--color-light-blue);
+}
+```
+
+<!-- Explicar as variáveis globais -->
+
+---
+
+# Componente: Botão (CSS)
+
+```css {25-34} {maxHeight:'420px'}
+.button {
+  /* TODO: mover variáveis para global.css  */
+  --font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --color-white: #fff;
+  --color-black: #0f172a; /* slate-900 */
+  --color-light-gray: #cbd5e1; /* slate-300 */
+  --color-lighter-gray: #f1f5f9; /* slate-100 */
+  --color-blue: #3b82f6; /* blue-500 */
+  --color-dark-blue: #1d4ed8; /* blue-700 */
+  --color-light-blue: #93c5fd; /* blue-300 */
+  --color-lighter-blue: #eff6ff; /* blue-50 */
+  --radius-sm: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+
+  /* Variáveis do botão */
+  --button-color: var(--color-black);
+  --button-background-color: var(--color-white);
+  --button-border-color: var(--color-light-gray);
+  --button-border-color-hover: var(--color-lighter-gray);
+  --button-outline-color-focus: var(--color-lighter-gray);
+
+  all: unset;
+  font-family: var(--font-family);
+  background-color: var(--button-background-color);
+  color: var(--button-color);
+  border: 1px solid var(--button-border-color);
+  border-radius: var(--radius-sm);
+  padding: var(--spacing-sm) var(--spacing-md);
+  cursor: pointer;
+  user-select: none;
+  line-height: 1;
+}
+
+.button:hover,
+.button--state-hover {
+  background-color: var(--button-border-color-hover);
+}
+
+.button:focus,
+.button--state-focus {
+  outline: 2px solid var(--button-outline-color-focus);
+}
+
+.button:active,
+.button--state-active {
+  margin-bottom: -2px;
+}
+
+.button:disabled,
+.button--state-disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.button:disabled:hover,
+.button--state-disabled:hover {
+  background-color: var(--button-background-color);
+}
+
+.button[data-variant="primary"] {
+  --button-color: var(--color-white);
+  --button-background-color: var(--color-blue);
+  --button-border-color: var(--color-blue);
+  --button-border-color-hover: var(--color-dark-blue);
+  --button-outline-color-focus: var(--color-light-blue);
+}
+
+.button[data-variant="secondary"] {
+  --button-color: var(--color-blue);
+  --button-background-color: var(--color-white);
+  --button-border-color: var(--color-blue);
+  --button-border-color-hover: var(--color-lighter-blue);
+  --button-outline-color-focus: var(--color-light-blue);
+}
+```
+
+<!-- Explicar as variáveis locais -->
+
+---
+
+# Componente: Botão (CSS)
+
+```css {37-61} {maxHeight:'420px'}
+.button {
+  /* TODO: mover variáveis para global.css  */
+  --font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --color-white: #fff;
+  --color-black: #0f172a; /* slate-900 */
+  --color-light-gray: #cbd5e1; /* slate-300 */
+  --color-lighter-gray: #f1f5f9; /* slate-100 */
+  --color-blue: #3b82f6; /* blue-500 */
+  --color-dark-blue: #1d4ed8; /* blue-700 */
+  --color-light-blue: #93c5fd; /* blue-300 */
+  --color-lighter-blue: #eff6ff; /* blue-50 */
+  --radius-sm: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+
+  /* Variáveis do botão */
+  --button-color: var(--color-black);
+  --button-background-color: var(--color-white);
+  --button-border-color: var(--color-light-gray);
+  --button-border-color-hover: var(--color-lighter-gray);
+  --button-outline-color-focus: var(--color-lighter-gray);
+
+  all: unset;
+  font-family: var(--font-family);
+  background-color: var(--button-background-color);
+  color: var(--button-color);
+  border: 1px solid var(--button-border-color);
+  border-radius: var(--radius-sm);
+  padding: var(--spacing-sm) var(--spacing-md);
+  cursor: pointer;
+  user-select: none;
+  line-height: 1;
+}
+
+.button:hover,
+.button--state-hover {
+  background-color: var(--button-border-color-hover);
+}
+
+.button:focus,
+.button--state-focus {
+  outline: 2px solid var(--button-outline-color-focus);
+}
+
+.button:active,
+.button--state-active {
+  margin-bottom: -2px;
+}
+
+.button:disabled,
+.button--state-disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.button:disabled:hover,
+.button--state-disabled:hover {
+  background-color: var(--button-background-color);
+}
+
+.button[data-variant="primary"] {
+  --button-color: var(--color-white);
+  --button-background-color: var(--color-blue);
+  --button-border-color: var(--color-blue);
+  --button-border-color-hover: var(--color-dark-blue);
+  --button-outline-color-focus: var(--color-light-blue);
+}
+
+.button[data-variant="secondary"] {
+  --button-color: var(--color-blue);
+  --button-background-color: var(--color-white);
+  --button-border-color: var(--color-blue);
+  --button-border-color-hover: var(--color-lighter-blue);
+  --button-outline-color-focus: var(--color-light-blue);
+}
+```
+
+<!-- Explicar as variáveis locais -->
+
+---
+
+# Componente: Botão (CSS)
+
+```css {63-77} {maxHeight:'420px'}
+.button {
+  /* TODO: mover variáveis para global.css  */
+  --font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --color-white: #fff;
+  --color-black: #0f172a; /* slate-900 */
+  --color-light-gray: #cbd5e1; /* slate-300 */
+  --color-lighter-gray: #f1f5f9; /* slate-100 */
+  --color-blue: #3b82f6; /* blue-500 */
+  --color-dark-blue: #1d4ed8; /* blue-700 */
+  --color-light-blue: #93c5fd; /* blue-300 */
+  --color-lighter-blue: #eff6ff; /* blue-50 */
+  --radius-sm: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+
+  /* Variáveis do botão */
+  --button-color: var(--color-black);
+  --button-background-color: var(--color-white);
+  --button-border-color: var(--color-light-gray);
+  --button-border-color-hover: var(--color-lighter-gray);
+  --button-outline-color-focus: var(--color-lighter-gray);
+
+  all: unset;
+  font-family: var(--font-family);
+  background-color: var(--button-background-color);
+  color: var(--button-color);
+  border: 1px solid var(--button-border-color);
+  border-radius: var(--radius-sm);
+  padding: var(--spacing-sm) var(--spacing-md);
+  cursor: pointer;
+  user-select: none;
+  line-height: 1;
+}
+
+.button:hover,
+.button--state-hover {
+  background-color: var(--button-border-color-hover);
+}
+
+.button:focus,
+.button--state-focus {
+  outline: 2px solid var(--button-outline-color-focus);
+}
+
+.button:active,
+.button--state-active {
+  margin-bottom: -2px;
+}
+
+.button:disabled,
+.button--state-disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.button:disabled:hover,
+.button--state-disabled:hover {
+  background-color: var(--button-background-color);
+}
+
+.button[data-variant="primary"] {
+  --button-color: var(--color-white);
+  --button-background-color: var(--color-blue);
+  --button-border-color: var(--color-blue);
+  --button-border-color-hover: var(--color-dark-blue);
+  --button-outline-color-focus: var(--color-light-blue);
+}
+
+.button[data-variant="secondary"] {
+  --button-color: var(--color-blue);
+  --button-background-color: var(--color-white);
+  --button-border-color: var(--color-blue);
+  --button-border-color-hover: var(--color-lighter-blue);
+  --button-outline-color-focus: var(--color-light-blue);
+}
+```
+
+<!-- Explicar as variáveis locais -->
+
 ---
 
 # Referências
