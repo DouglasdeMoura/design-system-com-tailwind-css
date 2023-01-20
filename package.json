@@ -1,5 +1,5 @@
 {
-  "name": "criando-um-design-system-com-tailwind-css",
+  "name": "design-system-com-tailwind-css",
   "private": true,
   "scripts": {
     "build": "slidev build",
