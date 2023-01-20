@@ -17,7 +17,7 @@ colorSchema: 'dark'
 # Design System com Tailwind CSS
 
 <div class="abs-br m-6 flex gap-2">
-  <a href="https://github.com/douglasdemoura" target="_blank" alt="GitHub"
+  <a href="https://github.com/DouglasdeMoura/design-system-com-tailwind-css" target="_blank" alt="GitHub"
     class="text-xl icon-btn opacity-50 !border-none !hover:text-white">
     <carbon-logo-github />
   </a>

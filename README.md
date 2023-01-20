@@ -1,11 +1,15 @@
-# Welcome to [Slidev](https://github.com/slidevjs/slidev)!
+# Design System com Tailwind CSS
 
-To start the slide show:
+Palestra apresentada no [Conferência CSS Brasil 2021](https://conferenciacssbrasil.com.br/).
+
+Veja os slides em [design-system-com-tailwind-css.vercel.app](https://design-system-com-tailwind-css.vercel.app/).
+
+Feito com [Slidev](https://sli.dev/)
+
+# Desenvolvimento
 
 - `npm install`
 - `npm run dev`
-- visit http://localhost:3030
+- visite http://localhost:3030
 
-Edit the [slides.md](./slides.md) to see the changes.
-
-Learn more about Slidev on [documentations](https://sli.dev/).
+Edite [slides.md](./slides.md) para ver as mudanças.
