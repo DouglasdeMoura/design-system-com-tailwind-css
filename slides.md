@@ -93,7 +93,7 @@ layout: center
 # Componente: Botão
 
 <div class="flex align-center justify-center mt-4">
-  <video autoplay loop src="videos/storybook-button.mov"></video>
+  <video autoplay loop src="https://douglasmoura.dev/videos/storybook-button.mov"></video>
 </div>
 
 ---
