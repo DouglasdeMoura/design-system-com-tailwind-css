@@ -1,6 +1,6 @@
 # Design System com Tailwind CSS
 
-Palestra apresentada no [Conferência CSS Brasil 2021](https://conferenciacssbrasil.com.br/).
+Palestra apresentada no [Conferência CSS Brasil 2023](https://conferenciacssbrasil.com.br/).
 
 Veja os slides em [design-system-com-tailwind-css.vercel.app](https://design-system-com-tailwind-css.vercel.app/).
 
